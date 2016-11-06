@@ -1,3 +1,3 @@
 #!/bin/bash
 sudo wget bit.ly/1604_v10_odoo_peru_installation && bash 1604_v10_odoo_installation
-sudo wget bit.ly/odoo_peru_nginx && bash odoo_nginx
+sudo wget bit.ly/odoo_peru_nginx && odoo_peru_nginx
