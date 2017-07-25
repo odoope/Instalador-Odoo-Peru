@@ -5,7 +5,7 @@ sudo apt-get update && apt-get upgrade -y && apt-get install postgresql postgres
 git clone --depth=1 --branch=10.0 https://github.com/odoo/odoo.git /opt/odoo/odoo
 sudo chown odoo:odoo /opt/odoo/ -R && sudo chown odoo:odoo /var/log/odoo/ -R && cd /opt/odoo/odoo && sudo pip install --upgrade pip && sudo pip install -r requirements.txt
 sudo npm install -g less less-plugin-clean-css -y && sudo ln -s /usr/bin/nodejs /usr/bin/node
-wget https://downloads.wkhtmltopdf.org/0.12/0.12.4/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz && sudo tar -xvf wkhtmltox-0.12.3_linux-generic-amd64.tar.xz
+wget https://downloads.wkhtmltopdf.org/0.12/0.12.4/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz && sudo tar -xvf wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
 cd wkhtmltox/bin/ && sudo mv wkhtmltopdf  /usr/bin/wkhtmltopdf && sudo mv wkhtmltoimage  /usr/bin/wkhtmltoimage && cd ..
 wget -N http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz && sudo gunzip GeoLiteCity.dat.gz && sudo mkdir /usr/share/GeoIP/ && sudo mv GeoLiteCity.dat /usr/share/GeoIP/
 sudo su - postgres -c "createuser -s odoo"
