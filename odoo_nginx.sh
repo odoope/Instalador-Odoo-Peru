@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo apt-get install nginx -y
-IPADR=`ifconfig eth0 2>/dev/null|awk '/inet addr:/ {print $2}'|sed 's/addr://'`
+IPADR=$(ip route get 8.8.8.8 | awk 'NR==1 {print $NF}')
 nginx_file=/etc/nginx/sites-available/$IPADR
 sudo su root -c "echo 'upstream openerpweb {
     server 0.0.0.0:8069 weight=1 fail_timeout=300s;
@@ -66,5 +66,7 @@ echo '
 }' >> $nginx_file
 sudo ln -s $nginx_file /etc/nginx/sites-enabled/
 sudo service nginx restart
+rm -R /etc/nginx/sites-available/default
+rm -R /etc/nginx/sites-enabled/default
 echo 'Houston, estamos listos para despegar. Solo abre http://'$IPADR
 echo 'En caso de cualquier problema, contacte a : http://odooperu.pe/page/website.contactus'
