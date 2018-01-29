@@ -2,4 +2,4 @@
 sudo wget raw.githubusercontent.com/odoope/Instalador-Odoo-Peru/enterprise/1604_v11_odoo_installation
 sudo bash 1604_v11_odoo_installation
 sudo wget raw.githubusercontent.com/odoope/Instalador-Odoo-Peru/enterprise/odoo_nginx.sh
-sudo bash odoo_nginx
+sudo bash odoo_nginx.sh
