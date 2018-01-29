@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo wget bit.ly/1604_v11_odoo_peru_installation
+sudo wget raw.githubusercontent.com/odoope/Instalador-Odoo-Peru/enterprise/1604_v11_odoo_installation
 sudo bash 1604_v11_odoo_peru_installation
-sudo wget bit.ly/odoo_peru_nginx
+sudo wget https://raw.githubusercontent.com/odoope/Instalador-Odoo-Peru/enterprise/odoo_nginx.sh
 sudo bash odoo_peru_nginx
