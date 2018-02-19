@@ -1,4 +1,4 @@
-# odoo_installer
+# Instalador Odoo Community 11
 
 Script para instalación automática de Odoo
 ``` sh
